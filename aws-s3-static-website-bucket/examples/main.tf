@@ -3,10 +3,15 @@ provider "aws" {
   region  = "us-east-1"
 }
 
+resource "random_string" "random" {
+  length           = 6
+  special          = false
+}
+
 module "website_s3_bucket" {
   source  = "../"
 
-  bucket_name = "spacelift-modules-testcase"
+  bucket_name = "spacelift-modules-testcase${random_string.random}"
 
   tags = {
     Terraform   = "true"

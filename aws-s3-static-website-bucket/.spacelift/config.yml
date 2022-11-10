@@ -1,6 +1,6 @@
 version: 1
 # Your module version - must be changed to release a new version
-module_version: 0.1.7
+module_version: 0.1.8
 
 # Any default settings that should be used for all test cases
 test_defaults:
@@ -16,4 +16,3 @@ tests:
   - name: Test the module with 0.13.7
     project_root: examples
     terraform_version: 0.13.7
-    depends_on: ["test-0.12.31"]

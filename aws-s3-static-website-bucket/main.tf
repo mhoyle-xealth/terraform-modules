@@ -13,7 +13,7 @@ resource "aws_s3_bucket_website_configuration" "s3_bucket" {
   }
 
   error_document {
-    key = "noerror.html"
+    key = "error.html"
   }
 }
 

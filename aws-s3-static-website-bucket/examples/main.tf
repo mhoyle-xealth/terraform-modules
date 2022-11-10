@@ -9,7 +9,7 @@ resource "random_string" "random" {
 }
 
 module "website_s3_bucket" {
-  source  = "../"
+  source = "../"
 
   bucket_name = "spacelift-modules-testcase${random_string.random.result}"
 

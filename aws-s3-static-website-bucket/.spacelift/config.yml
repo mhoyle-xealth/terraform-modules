@@ -17,9 +17,3 @@ tests:
     project_root: examples
     terraform_version: 0.13.7
     depends_on: ["test-0.12.31"]
-
-  - name: Ensure that the submodule can fail
-    # You can use negative to indicate that the test case is expected to fail
-    negative: true
-    project_root: examples
-    terraform_version: 0.12.31

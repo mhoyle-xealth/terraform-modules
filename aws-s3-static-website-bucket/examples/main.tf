@@ -1,0 +1,15 @@
+provider "aws" {
+  version = "~> 4.0"
+  region  = "us-east-1"
+}
+
+module "website_s3_bucket" {
+  source  = "../"
+
+  bucket_name = "spacelift-modules-testcase"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "test"
+  }
+}
